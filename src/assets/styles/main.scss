@@ -1,29 +1,29 @@
 // main.scss
 
 // 1. Abstracts
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@forward "abstracts/variables";
+@forward "abstracts/mixins";
 
 // 2. Base
-@import "base/colors";
-@import "base/reset";
-@import "base/typography";
+@forward "base/colors";
+@forward "base/reset";
+@forward "base/typography";
 
 // 3. Layout
-@import "layout/header";
-@import "layout/footer";
+@forward "layout/header";
+@forward "layout/footer";
 
 // 4. Components
-@import "components/button";
-@import "components/card";
+@forward "components/button";
+@forward "components/card";
 
 // 5. Pages
-@import "pages/home";
-@import "pages/about";
+@forward "pages/home";
+@forward "pages/about";
 
 // 6. Themes
-@import "themes/light";
-@import "themes/dark";
+@forward "themes/light";
+@forward "themes/dark";
 
 // 7. Vendors
-@import "vendors/normalize";
+@forward "vendors/normalize";

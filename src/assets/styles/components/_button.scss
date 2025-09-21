@@ -1,4 +1,7 @@
-.contactBtn{
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+
+.contactBtn {
     font-family: $font-secondary;
     font-size: 1.2rem;
     font-weight: $font-weight-semibold;
@@ -10,13 +13,27 @@
     border-radius: .4rem;
     color: $color-primary-main;
     transition: box-shadow 3ms ease-in-out;
-    &:hover{
+    padding: 1.2rem 1.6rem;
+
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+
+    &:hover {
         box-shadow: 0px 0px 8px $color-primary-main;
         cursor: pointer;
     }
 }
 
-.letsTalk{
+.letsTalkBtn {
     width: 10.6rem;
     height: 4.7rem;
     background-color: $color-primary-main;
