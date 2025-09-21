@@ -1,0 +1,55 @@
+@import "../../assets/styles/main.scss";
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3.6rem 0;
+
+    .logo {
+        font-family: $font-primary;
+        font-size: 28px;
+        color: $color-primary-main;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        .one {
+            color: $color-text-black;
+        }
+
+        .two {
+            color: $color-text-grey;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5.4rem;
+
+        li {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            font-weight: $font-weight-semibold;
+            text-transform: uppercase;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            &:hover{
+                cursor: pointer;
+                color: $color-primary-main;
+            }
+            .active{
+                color: $color-primary-main;
+            }
+        }
+    }
+}

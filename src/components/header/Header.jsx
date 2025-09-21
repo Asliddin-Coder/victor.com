@@ -1,8 +1,11 @@
-import "./Header.module.scss"
+import Nav from "../nav/Nav"
+import styles from "./Header.module.scss"
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className="header container">
+      <Nav />
+    </div>
   )
 }
 

@@ -1,0 +1,24 @@
+.contactBtn{
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    background-color: transparent;
+    width: 9.2rem;
+    height: 3.9rem;
+    border: 1px solid $color-primary-main;
+    border-radius: .4rem;
+    color: $color-primary-main;
+    transition: box-shadow 3ms ease-in-out;
+    &:hover{
+        box-shadow: 0px 0px 8px $color-primary-main;
+        cursor: pointer;
+    }
+}
+
+.letsTalk{
+    width: 10.6rem;
+    height: 4.7rem;
+    background-color: $color-primary-main;
+    color: $color-text-white;
+}

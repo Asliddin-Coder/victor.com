@@ -1,0 +1,33 @@
+import styles from "./Nav.module.scss"
+
+const Nav = () => {
+  return (
+    <>
+        <div className={styles.nav}>
+            {/* LOGO start */}
+            <div className={styles.logo}><span className={styles.one}>VI</span><span className={styles.two}>CT</span>OR</div>
+            {/* LOGO end */}
+            {/* Navigation Bar start */}
+            <nav className={styles.navbar}>
+                <ul>
+                    <li className={styles.navItem}>Home</li>
+                    <li className={styles.navItem}>About</li>
+                    <li className={styles.navItem}>Portfolio</li>
+                    <li className={styles.navItem}>Service</li>
+                    <li className={styles.navItem}>Blogs</li>
+                    <li className={styles.navItem}>Books</li>
+                    <li className={styles.navItem}>Article</li>
+                    <li className={styles.navItem}>Programs</li>
+                    <li className={styles.navItem}>Contact</li>
+                </ul>
+            </nav>
+            {/* Navigation Bar end */}
+            {/* Contact start */}
+            <button className={styles.contactBtn}>Contact</button>
+            {/* Contact end */}
+        </div>
+    </>
+  )
+}
+
+export default Nav
