@@ -5,25 +5,27 @@
 }
 
 html {
+  width: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
 
-  @media screen and (max-width: 576px) {
-    font-size: 50%;
-  }
+@media screen and (max-width: 1200px) {
+  html { font-size: 62.5%; }
+}
+@media screen and (max-width: 992px) {
+  html { font-size: 57%; }
+}
+@media screen and (max-width: 768px) {
+  html { font-size: 55%; }
+}
+@media screen and (max-width: 576px) {
+  html { font-size: 50%; }
+}
 
-  @media screen and (max-width: 768px) {
-    font-size: 55%;
-  }
-
-  @media screen and (max-width: 992px) {
-    font-size: 57%;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 55%;
-  }
+body {
+  width: 100%; /* ✅ 100% ishlat, 100vw emas */
 }
 
 a {
@@ -37,22 +39,8 @@ li {
 }
 
 .container {
-  width: 114rem;
+  max-width: 114rem; /* ✅ max-width bilan chegarala */
+  width: 100%;       /* ✅ kichik ekranda 100% bo‘ladi */
   margin: 0 auto;
-
-  @media screen and (max-width: 576px) {
-    width: 56rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 75.6rem;
-  }
-
-  @media screen and (max-width: 992px) {
-    width: 97.6rem;
-  }
-
-  @media screen and (max-width: 1200px) {
-    width: 114rem;
-  }
+  padding: 0 1.6rem; /* ✅ ichki joy qoldirish */
 }
