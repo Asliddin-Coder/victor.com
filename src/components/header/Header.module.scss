@@ -1,19 +1,1 @@
 @use "../../assets/styles/main" as *;
-
-.header {
-    @media screen and (max-width: 576px) {
-        margin: 0 1.6rem;
-    }
-
-    @media screen and (max-width: 768px) {
-        margin: 0 1.6rem;
-    }
-
-    @media screen and (max-width: 992px) {
-        margin: 0 1.6rem;
-    }
-
-    @media screen and (max-width: 1200px) {
-        margin: 0 1.6rem;
-    }
-}

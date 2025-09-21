@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,23 +9,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-@media screen and (max-width: 1200px) {
-  html { font-size: 62.5%; }
-}
-@media screen and (max-width: 992px) {
-  html { font-size: 57%; }
-}
-@media screen and (max-width: 768px) {
-  html { font-size: 55%; }
-}
-@media screen and (max-width: 576px) {
-  html { font-size: 50%; }
-}
-
-body {
-  width: 100%; /* ✅ 100% ishlat, 100vw emas */
 }
 
 a {
@@ -39,8 +22,8 @@ li {
 }
 
 .container {
-  max-width: 114rem; /* ✅ max-width bilan chegarala */
-  width: 100%;       /* ✅ kichik ekranda 100% bo‘ladi */
+  max-width: 114rem;
+  width: 100%;    
   margin: 0 auto;
-  padding: 0 1.6rem; /* ✅ ichki joy qoldirish */
+  padding: 0 1.6rem;
 }
