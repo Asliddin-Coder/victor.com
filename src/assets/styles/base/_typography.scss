@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// ===============================
+// 📌 Typography Settings
+// ===============================
+
+// 🎨 Font families
+$font-primary: 'Anton', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
+// 🎨 Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// 🎨 Heading sizes
+$heading-130: 130px;
+$heading-80: 80px;
+$heading-64: 64px;
+$heading-40: 40px;
+$heading-32: 32px;
+$heading-24: 24px;
+$heading-20: 20px;
+
+// 🎨 Line height (optional, auto bo‘lsa ham qo‘yib ketish mumkin)
+$line-height-normal: 1.2;
+$line-height-auto: normal;

@@ -1,0 +1,46 @@
+// mixins.scss
+
+// umumiy text style mixin
+@mixin textStyle($size, $weight, $lineHeight: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+// --- Sub Headings ---
+@mixin subHeading24 {
+  @include textStyle(24px, 700, 30px); // Bold / 30
+}
+
+@mixin subHeading16Bold {
+  @include textStyle(16px, 700, 30px); // Bold / 30
+}
+
+@mixin subHeading16Medium {
+  @include textStyle(16px, 500); // Medium / Auto
+}
+
+@mixin subHeading14SemiBold {
+  @include textStyle(14px, 600, 20px); // SemiBold / 20
+}
+
+@mixin subHeading14Medium {
+  @include textStyle(14px, 500); // Medium / Auto
+}
+
+@mixin subHeading12SemiBold {
+  @include textStyle(12px, 600); // SemiBold / Auto
+}
+
+@mixin subHeading12Medium {
+  @include textStyle(12px, 500); // Medium / Auto
+}
+
+// --- Body ---
+@mixin body14Medium32 {
+  @include textStyle(14px, 500, 32px); // Medium / 32
+}
+
+@mixin body14Medium24 {
+  @include textStyle(14px, 500, 24px); // Medium / 24
+}
