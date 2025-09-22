@@ -28,7 +28,7 @@
     }
 
     &:hover {
-        box-shadow: 0px 0px 8px $color-primary-main;
+        box-shadow: 0px 0px 20px $color-primary-main;
         cursor: pointer;
     }
 }
@@ -36,6 +36,16 @@
 .letsTalkBtn {
     width: 10.6rem;
     height: 4.7rem;
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    font-weight: $font-weight-semibold;
     background-color: $color-primary-main;
     color: $color-text-white;
+    border: 1px solid $color-primary-main;
+    border-radius: .4rem;
+
+    &:hover {
+        box-shadow: 0px 0px 20px $color-primary-main;
+        cursor: pointer;
+    }
 }

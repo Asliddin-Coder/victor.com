@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import styles from "./Nav.module.scss"
 import { MdClose, MdMenu } from "react-icons/md";
 const Nav = () => {
@@ -9,10 +8,15 @@ const Nav = () => {
                 {/* LOGO start */}
                 <div className={styles.logo}><span className={styles.one}>VI</span><span className={styles.two}>CT</span>OR</div>
                 {/* LOGO end */}
+                <div className={styles.toolbar}>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                </div>
                 {/* Navigation Bar start */}
                 <nav className={styles.navbar}>
                     <ul>
-                        <li className={styles.navItem}>Home</li>
+                        <li className={`${styles.navItem} ${styles.active}`}>Home</li>
                         <li className={styles.navItem}>About</li>
                         <li className={styles.navItem}>Portfolio</li>
                         <li className={styles.navItem}>Service</li>
