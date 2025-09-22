@@ -19,7 +19,7 @@
             right: 0;
             width: 56.3rem;
             height: 84rem;
-            z-index: 1;
+            z-index: 2;
         }
 
         #person {
@@ -28,7 +28,7 @@
             right: 35rem;
             width: 47rem;
             height: auto;
-            z-index: 2;
+            z-index: 3;
         }
 
         .placeholder {
@@ -38,13 +38,38 @@
             font-size: 40rem;
             font-family: $font-primary;
             letter-spacing: 1rem;
+            z-index: 3;
             opacity: 0.05;
+        }
+
+        .lines {
+            width: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            z-index: 33;
+
+            .line {
+                position: absolute;
+                top: -10rem;
+                width: 200%;
+                height: 10rem;
+                background: #fff;
+                opacity: 0.01;
+                transform: rotate(-45deg);
+            }
         }
 
         .hello {
             display: flex;
             flex-direction: column;
-            z-index: 3;
+            z-index: 35;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
 
             #first {
                 color: $color-primary-main;
@@ -88,7 +113,7 @@
             }
         }
 
-        .bottomBox{
+        .bottomBox {
             position: absolute;
             bottom: 0;
             left: 0;
