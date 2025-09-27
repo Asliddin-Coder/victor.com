@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,7 +25,64 @@ li {
 
 .container {
   max-width: 114rem;
-  width: 100%;    
+  width: 100%;
   margin: 0 auto;
   padding: 0 1.6rem;
+}
+
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 55.5%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55.5%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 55.5%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55.5%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+  }
 }
