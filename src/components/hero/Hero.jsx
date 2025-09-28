@@ -2,11 +2,29 @@ import styles from "./Hero.module.scss"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegram } from "react-icons/fa";
 import backImg from "../../assets/images/Image.png";
 import person from "../../assets/images/person.png";
+import { useEffect, useState } from "react";
 const Hero = () => {
+
+  const [isScroll, setIsScroll] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScroll(true)
+      } else {
+        setIsScroll(false)
+      }
+
+      window.addEventListener('scroll', handleScroll)
+
+      return () => window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <>
       <div className={styles.hero}>
-        <div className={styles.container}>
+        <div className={styles.container} style={{ paddingTop: isScroll ? "40rem" : "0" }}>
           {/* Hello start */}
           <div className={styles.hello}>
             <span><span id={styles.first}>Hello,</span> I'm</span>
