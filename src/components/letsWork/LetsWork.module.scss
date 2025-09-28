@@ -29,12 +29,15 @@
             height: 33.5rem;
             color: $color-text-white;
             background-color: $color-text-black;
+            padding: 2rem;
 
             h3 {
-                font-size: clamp($heading-24, 3vw, $heading-40);
+                // font-size: clamp($heading-24, 3vw, $heading-40);
+                font-size: $heading-40;
                 font-weight: $font-weight-regular;
                 font-family: $font-primary;
                 text-transform: capitalize;
+                text-align: center;
             }
 
             .downloadBtn {
@@ -67,11 +70,14 @@
     .letsWork {
         .container {
             .trused {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 4rem;
+                width: 100%;
+                height: auto;
+                gap: 3rem;
                 flex-wrap: wrap;
+            }
+            .letsWorkBlock{
+                width: 100%;
+                height: auto;
             }
         }
     }
