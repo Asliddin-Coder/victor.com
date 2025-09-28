@@ -32,7 +32,6 @@
             padding: 2rem;
 
             h3 {
-                // font-size: clamp($heading-24, 3vw, $heading-40);
                 font-size: $heading-40;
                 font-weight: $font-weight-regular;
                 font-family: $font-primary;
@@ -69,6 +68,7 @@
 @media screen and (max-width: 992px) {
     .letsWork {
         .container {
+            padding: 8.7rem 2rem;
             .trused {
                 width: 100%;
                 height: auto;
@@ -77,6 +77,7 @@
             }
             .letsWorkBlock{
                 width: 100%;
+                padding: 5.1rem 8rem;
                 height: auto;
             }
         }
