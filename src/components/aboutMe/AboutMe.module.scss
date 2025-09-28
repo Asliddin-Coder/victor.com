@@ -8,45 +8,19 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
         gap: 6.5rem;
         padding: 9rem 0;
-
-        @media screen and (max-width: 576px) {
-            flex-direction: column;
-        }
-
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-        }
-
-        @media screen and (max-width: 992px) {
-            flex-direction: column;
-        }
 
         .image {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
             gap: 6.1rem;
             width: 52.1rem;
             height: 41.2rem;
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
-
-            @media screen and (max-width: 576px) {
-                flex-direction: column;
-            }
-
-            @media screen and (max-width: 768px) {
-                flex-direction: column;
-            }
-
-            @media screen and (max-width: 992px) {
-                flex-direction: column;
-            }
 
             .imageOne {
                 display: flex;
@@ -122,12 +96,13 @@
         .titleAndDesc {
             display: flex;
             align-items: flex-start;
+            justify-content: center;
             width: 52.1rem;
             height: 28.4rem;
             gap: 3rem;
 
             .orange {
-                font-size: $heading-64;
+                font-size: $heading-80;
                 font-weight: $font-weight-semibold;
                 color: $color-primary-main;
                 font-family: $font-primary;
@@ -157,6 +132,28 @@
                     letter-spacing: .2rem;
                     text-align: justify;
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .aboutMe{
+        width: 100%;
+        height: auto;
+        .container{
+            flex-direction: column;
+            gap: 4rem;
+            padding: 0 1.6rem;
+            .image{
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+            }
+            .titleAndDesc{
+                width: 100%;
+                height: auto;
             }
         }
     }
