@@ -1,0 +1,78 @@
+@use "../../assets/styles/main" as *;
+
+.letsWork {
+    width: 100%;
+    height: 31rem;
+    background-color: $color-secondary-grey-10;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8.7rem;
+        gap: 8.5rem;
+
+        .trused {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9rem;
+        }
+
+        .letsWorkBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            width: 114rem;
+            height: 33.5rem;
+            color: $color-text-white;
+            background-color: $color-text-black;
+
+            h3 {
+                font-size: clamp($heading-24, 3vw, $heading-40);
+                font-weight: $font-weight-regular;
+                font-family: $font-primary;
+                text-transform: capitalize;
+            }
+
+            .downloadBtn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $font-secondary;
+                font-size: 1.4rem;
+                font-weight: $font-weight-semibold;
+                color: $color-secondary-grey-100;
+                gap: .8rem;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+
+                .btn {
+                    font-size: 2.5rem;
+                    color: $color-primary-main;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .letsWork {
+        .container {
+            .trused {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4rem;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
