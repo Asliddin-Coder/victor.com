@@ -1,0 +1,135 @@
+@use '../../assets/styles/main' as *;
+
+.aboutMe {
+    width: 100%;
+    height: 59rem;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9rem 0;
+
+        .image {
+            position: relative;
+            width: 50%;
+            height: 41.2rem;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+
+            .imageOne {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                    width: 23rem;
+                    height: 25.58rem;
+                }
+
+                .title {
+                    position: absolute;
+                    top: 8rem;
+                    right: 8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1.2rem;
+                    font-family: $font-secondary;
+                    font-size: 1.4rem;
+                    font-weight: $font-weight-semibold;
+                    line-height: 2rem;
+                    width: 15.1rem;
+                    height: max-content;
+                    .orange {
+                        color: $color-primary-main;
+                        font-size: $heading-64;
+                        font-weight: $font-weight-regular;
+                        font-family: $font-primary;
+                    }
+                }
+            }
+
+            .imageTwo {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    right: 0;
+                    top: -4rem;
+                    width: 23rem;
+                    height: 25.58rem;
+                }
+
+                .title {
+                    position: absolute;
+                    bottom: -12rem;
+                    left: 8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1.2rem;
+                    font-family: $font-secondary;
+                    font-size: 1.4rem;
+                    font-weight: $font-weight-semibold;
+                    line-height: 2rem;
+                    width: 15.1rem;
+                    height: max-content;
+                    text-align: right;
+                    .orange {
+                        color: $color-primary-main;
+                        font-size: $heading-64;
+                        font-weight: $font-weight-regular;
+                        font-family: $font-primary;
+                    }
+                }
+            }
+
+
+        }
+
+        .titleAndDesc {
+            display: flex;
+            align-items: flex-start;
+            width: 52.1rem;
+            height: 28.4rem;
+            gap: 3rem;
+
+            .orange {
+                font-size: $heading-64;
+                font-weight: $font-weight-semibold;
+                color: $color-primary-main;
+                font-family: $font-primary;
+                letter-spacing: .4rem;
+            }
+
+            .desc {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                font-family: $font-secondary;
+                font-size: 1.4rem;
+                font-weight: $font-weight-medium;
+                line-height: 3.2rem;
+                gap: 2.3rem;
+
+                h4 {
+                    font-family: $font-primary;
+                    font-size: $heading-40;
+                    font-weight: $font-weight-regular;
+                    text-transform: uppercase;
+                    color: $color-text-black;
+                }
+
+                p {
+                    color: $color-text-grey;
+                    letter-spacing: .2rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
