@@ -11,14 +11,14 @@ const AboutMe = () => {
           <div className={styles.imageOne}>
             <img src={AboutOne} alt="About First" />
             <span className={styles.title}>
-              <span className={styles.orange}>8</span>
-              Year of experience
+              Saticfied Customers
+              <span className={styles.orange}>25</span>
             </span>
           </div>
           <div className={styles.imageTwo}>
             <span className={styles.title}>
-              Saticfied Customers
-              <span className={styles.orange}>25</span>
+              <span className={styles.orange}>8</span>
+              Year of experience
             </span>
             <img src={AboutTwo} alt="About Second" />
           </div>
