@@ -1,6 +1,10 @@
 @use "../../assets/styles/main" as *;
 
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .container {
         color: $color-text-white;
         width: 100%;
@@ -132,7 +136,8 @@
         .container {
             width: 100%;
             height: auto;
-            margin-top: 1rem;
+            margin-top: 22rem;
+
             #backImg {
                 display: none;
             }

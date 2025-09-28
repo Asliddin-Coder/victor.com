@@ -4,12 +4,14 @@ import { MdClose, MdMenu } from "react-icons/md";
 const Nav = () => {
 
     const [isScroll, setIsScroll] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
-            if(window.scrollY > 50){
+            if (window.scrollY > 50) {
                 setIsScroll(true)
-            }else{
+                setIsOpen(false)
+            } else {
                 setIsScroll(false)
             }
         }
@@ -26,14 +28,10 @@ const Nav = () => {
                     {/* LOGO start */}
                     <div className={styles.logo}><span className={styles.one}>VI</span><span className={styles.two}>CT</span>OR</div>
                     {/* LOGO end */}
-                    <div className={styles.toolbar}>
-                        <span className={styles.bar}></span>
-                        <span className={styles.bar}></span>
-                        <span className={styles.bar}></span>
-                    </div>
                     {/* Navigation Bar start */}
                     <nav className={styles.navbar}>
-                        <ul>
+                        <MdMenu className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}/>
+                        <ul id={styles.navbar} style={{right: isOpen ? "27rem" : "-30rem"}}>
                             <li className={`${styles.navItem} ${styles.active}`}>Home</li>
                             <li className={styles.navItem}>About</li>
                             <li className={styles.navItem}>Portfolio</li>

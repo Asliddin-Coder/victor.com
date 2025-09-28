@@ -14,17 +14,17 @@ const Hero = () => {
       } else {
         setIsScroll(false)
       }
-
-      window.addEventListener('scroll', handleScroll)
-
-      return () => window.removeEventListener('scroll', handleScroll)
     }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <>
       <div className={styles.hero}>
-        <div className={styles.container} style={{ paddingTop: isScroll ? "40rem" : "0" }}>
+        <div className={styles.container} style={{marginTop: isScroll ? "32rem" : "24rem"}}>
           {/* Hello start */}
           <div className={styles.hello}>
             <span><span id={styles.first}>Hello,</span> I'm</span>

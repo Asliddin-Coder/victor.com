@@ -16,7 +16,7 @@
     width: 100%;
     max-width: 1200px;
     padding: 0 2rem;
-    z-index: 15;
+    z-index: 20000;
 
     .logo {
       font-family: $font-primary;
@@ -37,22 +37,17 @@
       }
     }
 
-    .toolbar {
-      display: none;
-      flex-direction: column;
-      gap: 0.8rem;
-      border: 0.1rem solid $color-text-grey;
-      padding: 1rem;
-
-      .bar {
-        width: 4rem;
-        height: 0.3rem;
-        background-color: $color-text-grey;
-      }
-    }
-
     .navbar {
-      ul {
+      position: relative;
+
+      .hamburger {
+        display: none;
+        font-size: 3.5rem;
+        color: $color-primary-main;
+        border: 1px solid $color-text-grey;
+      }
+
+      #navbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -119,8 +114,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8); // qora fon + opacity
-    backdrop-filter: blur(6px); // optional effekt
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
   }
@@ -131,18 +126,45 @@
   .nav {
     align-items: flex-start;
     padding: 1rem 0;
-  }
 
-  .toolbar {
-    display: flex;
-  }
+    .container {
+      width: 100%;
+      .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
 
-  .navbar {
-    ul {
-      flex-direction: column;
-      gap: 1.4rem !important;
-      align-items: flex-start !important;
-      justify-content: flex-start !important;
+        .hamburger {
+          position: absolute;
+          right: 0;
+          display: block;
+          color: white;
+
+          &:hover {
+            cursor: pointer;
+            border-radius: .4rem;
+          }
+        }
+
+        #navbar {
+          position: absolute;
+          right: 30rem;
+          top: 4.5rem;
+          padding: 2rem;
+          width: 27rem;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(6px);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 2rem;
+        }
+      }
     }
+
+
   }
 }
