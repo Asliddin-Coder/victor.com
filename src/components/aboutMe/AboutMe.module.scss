@@ -12,6 +12,18 @@
         gap: 6.5rem;
         padding: 9rem 0;
 
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+
         .image {
             display: flex;
             align-items: center;
@@ -24,16 +36,30 @@
             -webkit-user-select: none;
             -moz-user-select: none;
 
+            @media screen and (max-width: 576px) {
+                flex-direction: column;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+            }
+
             .imageOne {
                 display: flex;
                 align-items: flex-end;
                 justify-content: space-between;
                 flex-direction: column;
                 gap: 3.5rem;
+
                 img {
                     width: 23rem;
                     height: 25.58rem;
                 }
+
                 .title {
                     display: flex;
                     align-items: center;
@@ -46,6 +72,7 @@
                     width: 15.1rem;
                     height: 9.2rem;
                     text-align: right;
+
                     .orange {
                         color: $color-primary-main;
                         font-size: $heading-64;
@@ -61,6 +88,7 @@
                 align-items: flex-start;
                 justify-content: space-between;
                 gap: 3.5rem;
+
                 img {
                     width: 23rem;
                     height: 25.58rem;
@@ -78,6 +106,7 @@
                     width: 15.1rem;
                     height: 9.2rem;
                     text-align: left;
+
                     .orange {
                         color: $color-primary-main;
                         font-size: $heading-64;
