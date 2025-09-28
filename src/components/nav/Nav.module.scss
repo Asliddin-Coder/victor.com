@@ -47,7 +47,7 @@
         border: 1px solid $color-text-grey;
       }
 
-      #navbar {
+      .nav_bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -129,15 +129,18 @@
 
     .container {
       width: 100%;
+
       .navbar {
         position: relative;
         display: flex;
         align-items: center;
+        width: 100%;
 
         .hamburger {
           position: absolute;
           right: 0;
-          display: block;
+          padding: 0;
+          display: flex;
           color: white;
 
           &:hover {
@@ -146,12 +149,12 @@
           }
         }
 
-        #navbar {
-          position: absolute;
-          right: 30rem;
-          top: 4.5rem;
+        .nav_bar {
+          position: fixed;
+          right: 0;
+          top: 9rem;
           padding: 2rem;
-          width: 27rem;
+          width: 50%;
           height: 100vh;
           background: rgba(0, 0, 0, 0.8);
           backdrop-filter: blur(6px);
@@ -161,7 +164,13 @@
           align-items: flex-start;
           justify-content: flex-start;
           gap: 2rem;
+          transition: all .3s ease-in;
+          transform: translateX(100%);
+          &.open{
+            transform: translateX(0);
+          }
         }
+
       }
     }
 

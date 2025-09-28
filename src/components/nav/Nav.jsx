@@ -30,8 +30,10 @@ const Nav = () => {
                     {/* LOGO end */}
                     {/* Navigation Bar start */}
                     <nav className={styles.navbar}>
-                        <MdMenu className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}/>
-                        <ul id={styles.navbar} style={{right: isOpen ? "27rem" : "-30rem"}}>
+                        <div className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
+                            {isOpen ? <MdClose /> : <MdMenu />}
+                        </div>
+                        <ul className={`${styles.nav_bar} ${isOpen ? styles.open : ""}`}>
                             <li className={`${styles.navItem} ${styles.active}`}>Home</li>
                             <li className={styles.navItem}>About</li>
                             <li className={styles.navItem}>Portfolio</li>
