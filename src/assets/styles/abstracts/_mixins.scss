@@ -1,4 +1,10 @@
 // mixins.scss
+@mixin flexbox($fd: row, $ai: center, $jc: center){
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+}
 
 // umumiy text style mixin
 @mixin textStyle($size, $weight, $lineHeight: normal) {

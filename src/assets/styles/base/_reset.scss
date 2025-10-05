@@ -27,19 +27,12 @@ li {
   max-width: 114rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.6rem;
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {}
 
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: 100vw;
-  }
-}
+@media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 992px) {
   html {
@@ -52,6 +45,7 @@ li {
 
   .container {
     width: 100vw;
+    padding: 0 1.6rem;
   }
 }
 
