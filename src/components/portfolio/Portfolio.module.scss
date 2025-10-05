@@ -2,15 +2,10 @@
 
 .portfolio {
   background-color: $color-secondary-grey-10;
-  width: 100%;
-
   .container {
-    gap: 6.3rem;
-    padding: 7.2rem 0;
 
     .header {
       position: relative;
-      width: 100%;
       @include flexbox($jc: space-between);
       gap: 2rem;
       flex-wrap: wrap;
