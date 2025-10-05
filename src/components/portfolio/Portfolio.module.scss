@@ -179,7 +179,9 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
-
+        .portfolioNav{
+            gap: 2.4rem;
+        }
         .prevNextBtn {
           width: 100%;
           justify-content: flex-end;

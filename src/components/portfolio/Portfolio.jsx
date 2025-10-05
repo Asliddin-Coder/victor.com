@@ -14,13 +14,20 @@ import portfolio_3 from "../../assets/images/portfolio-3.jpg";
 const Portfolio = () => {
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [activeCategory, setActiveCategory] = useState("ALL");
 
     const slides = [
-        { id: 1, img: portfolio_1, title: "Project 1", desc: "Web Design" },
+        { id: 1, img: portfolio_1, title: "Project 1", desc: "WEB DESIGN" },
         { id: 2, img: portfolio_2, title: "Project 2", desc: "Development" },
-        { id: 3, img: portfolio_3, title: "Project 3", desc: "UI/UX" },
-        { id: 4, img: portfolio_3, title: "Project 4", desc: "Branding" },
+        { id: 3, img: portfolio_3, title: "Project 3", desc: "UI/UX DESIGN" },
+        { id: 4, img: portfolio_3, title: "Project 4", desc: "BRANDING" },
+        { id: 5, img: portfolio_3, title: "Project 5", desc: "PRODUCT DESIGN" },
     ];
+
+    const filteredSlides =
+        activeCategory === "ALL"
+            ? slides
+            : slides.filter((s) => s.desc === activeCategory);
 
     return (
         <section className={styles.portfolio}>
@@ -31,11 +38,18 @@ const Portfolio = () => {
                     </div>
 
                     <ul className={styles.portfolioNav}>
-                        <li className={`${styles.navItem} ${styles.active}`}>ALL</li>
-                        <li className={styles.navItem}>UI/UX DESIGN</li>
-                        <li className={styles.navItem}>PRODUCT DESIGN</li>
-                        <li className={styles.navItem}>BRANDING</li>
-                        <li className={styles.navItem}>WEB DESIGN</li>
+                        {["ALL", "UI/UX DESIGN", "PRODUCT DESIGN", "BRANDING", "WEB DESIGN"].map(
+                            (cat) => (
+                                <li
+                                    key={cat}
+                                    className={`${styles.navItem} ${activeCategory === cat ? styles.active : ""
+                                        }`}
+                                    onClick={() => setActiveCategory(cat)}
+                                >
+                                    {cat}
+                                </li>
+                            )
+                        )}
                     </ul>
                     <div className={styles.prevNextBtn}>
                         <div
@@ -55,6 +69,7 @@ const Portfolio = () => {
 
                 <div className={styles.main}>
                     <Swiper
+                        key={activeCategory}
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
                         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                         modules={[Navigation]}
@@ -66,7 +81,7 @@ const Portfolio = () => {
                             1200: { slidesPerView: 3 },
                         }}
                     >
-                        {slides.map((item) => (
+                        {filteredSlides.map((item) => (
                             <SwiperSlide key={item.id}>
                                 <div className={styles.card}>
                                     <img src={item.img} alt={item.title} />
