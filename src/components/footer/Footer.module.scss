@@ -1,0 +1,73 @@
+@use "../../assets/styles/main" as *;
+
+
+.footer {
+    background-color: $color-text-black;
+    padding: 5.572rem 0 5.1rem 0;
+
+    .container {
+        @include flexbox($jc: space-between, $ai: flex-start);
+
+        .footerInfo {
+            @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+
+            h1 {
+                @include flexbox;
+                gap: 2.4rem;
+                font-size: $heading-40;
+                font-family: $font-primary;
+                color: $color-text-white;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                margin-bottom: 5.5rem;
+
+                span {
+                    font-size: $heading-80;
+                    color: $color-primary-main;
+                }
+            }
+
+            .infoAddress {
+                @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                gap: 4.2rem;
+                margin-bottom: 6.4rem;
+                .box {
+                    @include flexbox;
+                    gap: 1.6rem;
+                    .icon{
+                        font-size: 2.2rem;
+                        color: $color-primary-main;
+                    }
+                    .info {
+                        @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                        gap: .9rem;
+                        font-size: 1.6rem;
+                        font-weight: $font-weight-medium;
+                        font-family: $font-secondary;
+                        color: $color-text-white;
+                        a{
+                            font-size: 1.4rem;
+                            color: $color-secondary-grey-100;
+                        }
+                    }
+                }
+            }
+
+            .socialMedia{
+                @include flexbox;
+                gap: 2.8rem;
+                .icon{
+                    font-size: 3.9rem;
+                    color: $color-text-white;
+                    background-color: #ffffff26;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    transition: background-color .3s ease-in-out;
+                    &:hover{
+                        background-color: #ffffff46;
+                    }
+                }
+            }
+        }
+    }
+}
