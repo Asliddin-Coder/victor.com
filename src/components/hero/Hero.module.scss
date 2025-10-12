@@ -51,22 +51,28 @@
         }
 
         .lines {
-            width: 200%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
-            z-index: 10;
+            z-index: 3;
 
-            .line {
+            .line:first-child {
                 position: absolute;
-                top: -10rem;
-                width: 200%;
-                height: 10rem;
-                background: #fff;
-                opacity: 0.01;
+                top: 0;
+                left: -35rem;
+                width: 250.1rem;
+                height: 34.1rem;
+                background: #FFFFFF08;
+                transform: rotate(-45deg);
+            }
+
+            .line:last-child {
+                position: absolute;
+                top: 0;
+                left: -65rem;
+                width: 250.1rem;
+                height: 34.1rem;
+                background: #FFFFFF08;
                 transform: rotate(-45deg);
             }
         }
@@ -158,6 +164,7 @@
 
             .socialMedia {
                 z-index: 35;
+
                 .btn {
                     border: .1px solid $color-text-grey;
                     background-color: $color-text-black;

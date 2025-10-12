@@ -39,7 +39,6 @@ const Hero = () => {
           <div className={styles.lines}>
             <div className={styles.line}>A</div>
             <div className={styles.line}>BB</div>
-            <div className={styles.line}>C</div>
           </div>
           {/* Images */}
           <img id={styles.person} src={person} alt="" />

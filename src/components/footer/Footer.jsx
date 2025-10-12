@@ -11,6 +11,10 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className={styles.footer}>
+            <div className={styles.lines}>
+                <div className={styles.line}></div>
+                <div className={styles.line}></div>
+            </div>
             <div className={styles.container}>
                 {/* Footer Info start */}
                 <div className={styles.footerInfo}>
@@ -50,20 +54,21 @@ const Footer = () => {
                 {/* Footer Form Start */}
                 <div className={styles.footerForm}>
                     <h4>I’m always open to discussing <span>product design work</span> or partnership </h4>
+                    <div className={styles.line}></div>
                     <form action="">
                         <div className={styles.nameAndEmail}>
                             <div className={styles.name}>
                                 <label htmlFor="name">Your name*</label>
-                                <input type="text" id='name' name='name' placeholder='Enter your name here' />
+                                <input type="text" id='name' name='name' placeholder='Enter your name here' required />
                             </div>
                             <div className={styles.email}>
                                 <label htmlFor="email">Email Address*</label>
-                                <input type="email" id='email' name='email' placeholder='Enter your email address' />
+                                <input type="email" id='email' name='email' placeholder='Enter your email address' required />
                             </div>
                         </div>
                         <div className={styles.message}>
                             <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" rows={12} cols={65} placeholder='Write your message here'></textarea>
+                            <textarea name="message" id="message" placeholder='Write your message here'></textarea>
                         </div>
                         <button className={styles.contcFormBtn}>send message</button>
                     </form>
