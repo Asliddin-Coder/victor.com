@@ -132,10 +132,16 @@
     }
 }
 
+@media screen and (max-width: 768px){
+    .myServices {
+        padding-top: 17.6rem;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .myServices {
-        padding-top: 14.6rem;
-
+        z-index: 200;
+        padding-top: 20.6rem !important;
         .container {
             .lines{
                 display: none;
