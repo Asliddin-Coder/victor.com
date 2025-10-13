@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./Nav.module.scss"
 import { MdClose, MdMenu } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 const Nav = () => {
 
     const [isScroll, setIsScroll] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,15 +36,60 @@ const Nav = () => {
                             {isOpen ? <MdClose /> : <MdMenu />}
                         </div>
                         <ul className={`${styles.nav_bar} ${isOpen ? styles.open : ""}`}>
-                            <li className={`${styles.navItem} ${styles.active}`}>Home</li>
-                            <li className={styles.navItem}>About</li>
-                            <li className={styles.navItem}>Portfolio</li>
-                            <li className={styles.navItem}>Service</li>
-                            <li className={styles.navItem}>Blogs</li>
-                            <li className={styles.navItem}>Books</li>
-                            <li className={styles.navItem}>Article</li>
-                            <li className={styles.navItem}>Programs</li>
-                            <li className={styles.navItem}>Contact</li>
+                            <Link
+                                to={"/"}
+                                className={`${styles.navItem} ${location.pathname == '/' ? styles.active : ""}`}
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                to={"/about"}
+                                className={`${styles.navItem} ${location.pathname == '/about' ? styles.active : ""}`}
+                            >
+                                About
+                            </Link>
+                            <Link
+                                to={"/portfolio"}
+                                className={`${styles.navItem} ${location.pathname == '/portfolio' ? styles.active : ""}`}
+                            >
+                                Portfolio
+                            </Link>
+                            <Link
+                                to={"/service"}
+                                className={`${styles.navItem} ${location.pathname === '/service' ? styles.active : ""}`}
+                            >
+                                Service
+                            </Link>
+                            <Link
+                                to={"/blogs"}
+                                className={`${styles.navItem} ${location.pathname === '/blogs' ? styles.active : ""}`}
+                            >
+                                Blogs
+                            </Link>
+                            <Link
+                                to={"/books"}
+                                className={`${styles.navItem} ${location.pathname === '/books' ? styles.active : ""}`}
+                            >
+                                Books
+                            </Link>
+                            <Link
+                                to={"/article"}
+                                className={`${styles.navItem} ${location.pathname === '/article' ? styles.active : ""}`}
+                            >
+                                Article
+                            </Link>
+                                                        <Link
+                                to={"/programs"}
+                                className={`${styles.navItem} ${location.pathname === '/programs' ? styles.active : ""}`}
+                            >
+                                Programs
+                            </Link>
+                            <Link
+                                to={"/contact"}
+                                className={`${styles.navItem} ${location.pathname === '/contact' ? styles.active : ""}`}
+                            >
+                                Contact
+                            </Link>
                         </ul>
                     </nav>
                     {/* Navigation Bar end */}

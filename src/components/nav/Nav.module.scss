@@ -1,6 +1,7 @@
 @use "../../assets/styles/main" as *;
 
 .nav {
+  background-color: $color-text-black;
   display: flex;
   align-items: center;
   justify-content: center;
