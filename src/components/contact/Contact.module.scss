@@ -1,0 +1,247 @@
+@use "../../assets/styles/main" as *;
+
+.contact {
+    padding: 6.572rem 0 5.1rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        @include flexbox($jc: space-between, $ai: flex-start);
+
+        .footerInfo {
+            @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+            margin-top: -3.5rem;
+            z-index: 20;
+
+            h1 {
+                @include flexbox;
+                gap: 2.4rem;
+                font-size: $heading-40;
+                font-family: $font-primary;
+                color: $color-text-black;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                margin-bottom: 5.5rem;
+
+                span {
+                    font-size: $heading-80;
+                    color: $color-primary-main;
+                }
+            }
+
+            .infoAddress {
+                @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                gap: 4.2rem;
+                margin-bottom: 6.4rem;
+
+                .box {
+                    @include flexbox;
+                    gap: 1.6rem;
+
+                    .icon {
+                        font-size: 2.2rem;
+                        color: $color-primary-main;
+                    }
+
+                    .info {
+                        @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                        gap: .9rem;
+                        font-size: 1.6rem;
+                        font-weight: $font-weight-medium;
+                        font-family: $font-secondary;
+                        color: $color-text-black;
+
+                        a {
+                            font-size: 1.4rem;
+                            color: $color-secondary-grey-100;
+                        }
+                    }
+                }
+            }
+
+            .socialMedia {
+                @include flexbox;
+                gap: 2.8rem;
+
+                .icon {
+                    font-size: 3.9rem;
+                    color: $color-text-black;
+                    background-color: #28282826;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    transition: background-color .3s ease-in-out;
+
+                    &:hover {
+                        background-color: #ffffff46;
+                    }
+                }
+            }
+        }
+
+        .footerForm {
+            h4 {
+                font-size: $heading-24;
+                font-family: $font-primary;
+                color: $color-text-black;
+                letter-spacing: .1rem;
+                padding-bottom: 2.4rem;
+
+                span {
+                    color: $color-primary-main;
+                }
+            }
+
+            .line {
+                width: 100%;
+                height: .2rem;
+                background-color: #CACDD11A;
+                margin-bottom: 4rem;
+            }
+
+            form {
+                @include flexbox($fd: column, $ai: flex-start);
+
+                .nameAndEmail {
+                    width: 100%;
+                    @include flexbox($jc: space-between);
+                    gap: 3rem;
+                    margin-bottom: 3.2rem;
+
+                    .name {
+                        @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                        gap: 1.2rem;
+
+                        label {
+                            font-size: 1.4rem;
+                            font-weight: $font-weight-medium;
+                            font-family: $font-secondary;
+                            color: $color-text-black;
+                            letter-spacing: .1rem;
+                        }
+
+                        input {
+                            width: 31.2rem;
+                            height: 5.4rem;
+                            border: none;
+                            padding: 2rem 1.6rem;
+                            background-color: #CACDD11A;
+                            color: $color-text-black;
+
+                            &::placeholder {
+                                color: #A9A9AA99;
+                            }
+                        }
+                    }
+
+                    .email {
+                        @extend .name;
+                    }
+                }
+
+                .message {
+                    @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                    gap: 1.2rem;
+                    margin-bottom: 4.8rem;
+                    width: 100%;
+
+                    label {
+                        font-size: 1.4rem;
+                        font-weight: $font-weight-medium;
+                        font-family: $font-secondary;
+                        color: $color-text-black;
+                        letter-spacing: .1rem;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 12.4rem;
+                        border: none;
+                        padding: 2rem 1.6rem;
+                        background-color: #CACDD11A;
+                        color: $color-text-black;
+                        
+                        &::placeholder {
+                            color: #A9A9AA99;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contact {
+        padding-top: 12.6rem;
+        .container {
+            flex-direction: column;
+
+            .footerInfo {
+                margin-bottom: 4.8rem;
+            }
+
+            .footerForm {
+                h4 {
+                    font-size: $heading-24;
+                    font-family: $font-primary;
+                    color: $color-text-black;
+                    letter-spacing: .1rem;
+                    padding-bottom: 2.4rem;
+
+                    span {
+                        color: $color-primary-main;
+                    }
+                }
+
+                .line {
+                    width: 100%;
+                    height: .2rem;
+                    background-color: #CACDD11A;
+                    margin-bottom: 4rem;
+                }
+
+                form {
+                    @include flexbox($fd: column, $ai: flex-start);
+
+                    .nameAndEmail {
+                        width: 100%;
+                        @include flexbox($fd: column, $ai: flex-start);
+                        gap: 3rem;
+                        margin-bottom: 3.2rem;
+
+                        .name {
+                            @include flexbox($fd: column, $ai: flex-start, $jc: space-between);
+                            gap: 1.2rem;
+                            width: 100%;
+
+                            label {
+                                font-size: 1.4rem;
+                                font-weight: $font-weight-medium;
+                                font-family: $font-secondary;
+                                color: $color-text-black;
+                                letter-spacing: .1rem;
+                            }
+
+                            input {
+                                width: 100%;
+                                height: 5.4rem;
+                                border: none;
+                                padding: 2rem 1.6rem;
+                                background-color: #CACDD11A;
+                                color: $color-text-black;
+
+                                &::placeholder {
+                                    color: #A9A9AA99;
+                                }
+                            }
+                        }
+
+                        .email {
+                            @extend .name;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

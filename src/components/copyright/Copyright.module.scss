@@ -1,0 +1,17 @@
+@use "../../assets/styles/main" as *;
+
+.copyright{
+    @include flexbox;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: $font-secondary;
+    width: 100%;
+    height: 8rem;
+    background-color: black;
+    color: $color-secondary-grey-100;
+    line-height: 2rem;
+    span{
+        color: $color-text-white;
+    }
+}

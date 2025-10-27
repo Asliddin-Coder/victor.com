@@ -1,0 +1,122 @@
+@use "../../assets/styles/main" as *;
+
+.login {
+    width: 100%;
+    transition: all .3s ease;
+
+    .container {
+        padding: 5rem;
+        width: 100%;
+        @include flexbox($fd: column);
+
+        h1 {
+            font-size: $heading-80;
+            font-weight: $font-weight-semibold;
+            font-family: $font-primary;
+            letter-spacing: .2rem;
+            padding-bottom: 3rem;
+        }
+
+        form {
+            width: 60rem;
+            @include flexbox($fd: column, $ai: flex-start);
+
+            label {
+                font-size: $heading-24;
+                font-weight: $font-weight-regular;
+                font-family: $font-secondary;
+                text-transform: capitalize;
+                margin-bottom: 1rem;
+            }
+
+            input {
+                width: 100%;
+                height: 5rem;
+                font-size: 1.6rem;
+                padding: 1rem 2rem;
+                margin-bottom: 3rem;
+            }
+
+            button {
+                font-size: $heading-24;
+                font-weight: $font-weight-regular;
+                text-transform: capitalize;
+                font-family: $font-secondary;
+                width: 100%;
+                height: 5rem;
+                background-color: $color-primary-main;
+                color: $color-text-white;
+                border: none;
+                border-radius: .5rem;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    box-shadow: 0 0 2rem $color-primary-main;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .login {
+        width: 100%;
+        transition: all .3s ease;
+
+        .container {
+            padding: 5rem;
+            width: 100%;
+            @include flexbox($fd: column);
+
+            h1 {
+                font-size: $heading-80;
+                font-weight: $font-weight-semibold;
+                font-family: $font-primary;
+                letter-spacing: .2rem;
+                padding-bottom: 3rem;
+            }
+
+            form {
+                width: 100%;
+                @include flexbox($fd: column, $ai: flex-start);
+
+                label {
+                    font-size: 2rem;
+                    font-weight: $font-weight-regular;
+                    font-family: $font-secondary;
+                    text-transform: capitalize;
+                    margin-bottom: 1rem;
+                }
+
+                input {
+                    width: 100%;
+                    height: 5rem;
+                    font-size: 1.6rem;
+                    padding: 1rem 2rem;
+                    margin-bottom: 3rem;
+                }
+
+                button {
+                    font-size: 2rem;
+                    font-weight: $font-weight-regular;
+                    text-transform: capitalize;
+                    font-family: $font-secondary;
+                    width: 100%;
+                    height: 5rem;
+                    background-color: $color-primary-main;
+                    color: $color-text-white;
+                    border: none;
+                    border-radius: .5rem;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        box-shadow: 0 0 2rem $color-primary-main;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

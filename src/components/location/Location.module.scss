@@ -1,0 +1,27 @@
+@use '../../assets/styles/main' as *;
+
+.location {
+    margin: 8rem 0;
+    .container {
+        .title {
+            @include flexbox($jc: flex-start);
+            gap: 2.4rem;
+            font-size: $heading-40;
+            font-family: $font-primary;
+            color: $color-text-black;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            margin-bottom: 5.5rem;
+
+            span {
+                font-size: $heading-80;
+                color: $color-primary-main;
+            }
+        }
+        .map{
+            width: 100%;
+            border: none;
+            border-radius: .5rem;
+        }
+    }
+}

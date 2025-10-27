@@ -1,0 +1,221 @@
+@use "../../assets/styles/main" as *;
+
+.bookSection {
+  background: #fafafa;
+  padding: 4rem 0;
+  position: relative;
+  z-index: 4;
+
+  .container {
+    height: 61rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .pageTitle {
+    font-family: $font-primary;
+    font-size: $heading-80;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+
+  .subtitle {
+    font-size: 2.4rem;
+    font-family: $font-secondary;
+    color: #555;
+    margin-bottom: 2.5rem;
+  }
+
+  /* === GRID === */
+  .booksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* === CARD === */
+  .bookCard {
+    height: 20rem;
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .bookContent {
+      @include flexbox($fd: column, $jc: space-between);
+      gap: 2rem;
+
+      h3 {
+        font-size: 2.4rem;
+        font-family: $font-primary;
+        letter-spacing: .2rem;
+        color: #111;
+        margin-bottom: 0.4rem;
+      }
+
+      .author {
+        color: #666;
+        font-size: 1.6rem;
+        font-family: $font-secondary;
+      }
+      .btns{
+        @include flexbox;
+        gap: 2rem;
+        .contcFormBtn{
+          @include flexbox;
+        }
+      }
+      // button {
+      //   margin-top: 1rem;
+      //   background: #007bff;
+      //   color: white;
+      //   border: none;
+      //   border-radius: 8px;
+      //   padding: 0.6rem 1.2rem;
+      //   cursor: pointer;
+      //   transition: background 0.3s ease;
+
+      //   &:hover {
+      //     background: #005ecf;
+      //   }
+      // }
+    }
+  }
+
+  /* === MODAL === */
+  .bookModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    backdrop-filter: blur(3px);
+
+    .modalInner {
+      background: white;
+      width: 90%;
+      max-width: 900px;
+      max-height: 90%;
+      overflow: auto;
+      border-radius: 16px;
+      padding: 1rem;
+      position: relative;
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #ff4d4f;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  /* === VIEWER === */
+  .bookViewer {
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .pdfContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .page {
+        position: relative;
+
+        canvas {
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          max-width: 100%;
+          height: auto;
+        }
+
+        .watermark {
+          position: absolute;
+          top: 50%;
+          left: 20%;
+          transform: rotate(-30deg);
+          opacity: 0.15;
+          font-weight: bold;
+          font-size: 24px;
+          user-select: none;
+        }
+      }
+    }
+  }
+
+  @media print {
+
+    .bookViewer,
+    .bookModal {
+      display: none !important;
+    }
+  }
+
+  /* ============================= */
+  /* 📱 RESPONSIVE SECTION */
+  /* ============================= */
+
+  /* --- ≤ 992px (planshet) --- */
+  @media (max-width: 992px) {
+    padding: 3rem 0;
+    height: 77rem;
+    z-index: 9;
+
+    .pageTitle {
+      font-size: $heading-64;
+    }
+
+    .subtitle {
+      font-size: $heading-32;
+      margin-bottom: 2rem;
+    }
+
+    .booksGrid {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 2fr));
+      gap: 2.4rem;
+    }
+
+    .bookCard {
+      padding: 1.2rem;
+
+      .bookContent {
+        width: 100%;
+        @include flexbox($fd: column);
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        .author {
+          font-size: 1.4rem;
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .bookModal .modalInner {
+      max-width: 95%;
+      padding: 0.8rem;
+    }
+  }
+}

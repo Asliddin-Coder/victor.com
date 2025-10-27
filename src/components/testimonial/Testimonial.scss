@@ -1,0 +1,182 @@
+@use "../../assets/styles/main" as *;
+
+.testimonial {
+  display: flex;
+  margin: 0 19rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 0rem;
+  background: #fff;
+  transition: all 0.3s ease;
+
+  &__image {
+    width: 100%;
+    img {
+      width: 36.4rem;
+      height: 46.2rem;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: grayscale(100%);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 50rem;
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: $heading-40;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      @include flexbox;
+      gap: 2rem;
+      letter-spacing: .2rem;
+
+      .num {
+        color: #ff3c00;
+        font-size: $heading-80;
+      }
+    }
+
+    .count {
+      font-size: 2.4rem;
+      font-family: $font-primary;
+      font-weight: 600;
+      color: $color-primary-main;
+      letter-spacing: .2rem;
+
+      &__right {
+        color: $color-secondary-grey-100;
+      }
+    }
+  }
+
+  .quote {
+    color: #ff3c00;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    width: 40rem;
+    margin-top: 1rem;
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+  }
+
+  &__author {
+    margin-top: 1rem;
+    font-family: $font-secondary;
+
+    h4 {
+      color: $color-primary-main;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      color: $color-secondary-grey-100;
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__indicators {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    .dot {
+      display: inline-block;
+      width: 20px;
+      height: 3px;
+      background-color: #e1e1e1;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+
+      &.active {
+        width: 25px;
+        background-color: #ff3c00;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 0.8rem;
+
+    button {
+      width: 40px;
+      height: 40px;
+      background-color: #ff3c00;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 0 1.5rem $color-primary-main;
+      }
+
+      svg {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 1.6rem;
+    &__image img {
+      width: 100%;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 3.2rem;
+
+        .num {
+          font-size: 6.4rem;
+        }
+      }
+
+      .count {
+        font-size: 2.4rem;
+        font-family: $font-primary;
+        font-weight: 600;
+        color: $color-primary-main;
+        letter-spacing: .2rem;
+
+        &__right {
+          color: $color-secondary-grey-100;
+        }
+      }
+    }
+  }
+}

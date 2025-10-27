@@ -1,0 +1,170 @@
+@use '../../assets/styles/main' as *;
+
+.myServices {
+    .container {
+        padding: 10rem 0 8.3rem 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5.71rem;
+
+        .lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -100;
+
+            .line {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 0.1rem; 
+                background-color: $color-secondary-grey-10;
+                opacity: .2;
+
+                &:nth-child(1) {
+                    left: 0%;
+                }
+
+                &:nth-child(2) {
+                    left: 25%;
+                }
+
+                &:nth-child(3) {
+                    left: 50%;
+                }
+
+                &:nth-child(4) {
+                    left: 75%;
+                }
+
+                &:nth-child(5) {
+                    left: 100%;
+                }
+            }
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.4rem;
+            font-size: $heading-40;
+            font-family: $font-primary;
+            font-weight: $font-weight-regular;
+            letter-spacing: .2rem;
+            line-height: 10rem;
+            text-transform: uppercase;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            color: $color-text-black;
+
+            .orange {
+                font-size: $heading-80;
+                color: $color-primary-main;
+            }
+        }
+
+        .cardList {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5.5rem;
+            z-index: 15;
+
+            .card {
+                width: 23rem;
+                flex-grow: 30rem;
+                height: 26.06rem;
+                background-color: $color-secondary-grey-10;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 3.1rem 2rem;
+
+                .icon {
+                    font-size: 3.2rem;
+                    color: $color-primary-main;
+                }
+
+                h4 {
+                    font-family: $font-secondary;
+                    font-size: 1.6rem;
+                    font-weight: $font-weight-bold;
+                    color: $color-primary-black;
+                    line-height: 3rem;
+                    letter-spacing: .1rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-family: $font-secondary;
+                    font-weight: $font-weight-medium;
+                    color: $color-secondary-grey-100;
+                    line-height: 2rem;
+                    letter-spacing: .2rem;
+                }
+
+                &:hover {
+                    background-color: $color-primary-main;
+                    color: $color-text-white;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+
+                    .icon {
+                        color: $color-text-white;
+                    }
+
+                    h4 {
+                        color: $color-text-white;
+                    }
+
+                    p {
+                        color: $color-secondary-grey-10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 768px){
+//     .myServices {
+//         padding-top: 10.6rem;
+//     }
+// }
+
+@media screen and (max-width: 992px) {
+    .myServices {
+        .container {
+            .lines{
+                display: none;
+            }
+            .title {
+                font-size: $heading-32;
+
+                .orange {
+                    font-size: $heading-64;
+                }
+            }
+
+            .cardList {
+                gap: 3.2rem;
+                padding: 0 1.6rem;
+
+                .card {
+                    flex-basis: 31rem;
+                    flex-grow: 2;
+
+                    p {
+                        line-height: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

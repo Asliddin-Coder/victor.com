@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript Asoslari",
+    "author": "Asliddin Meyliyev",
+    "file": "/books/js-asoslari.pdf",
+    "previewPages": 5
+  },
+  {
+    "id": 2,
+    "title": "React To‘liq Qo‘llanma",
+    "author": "Asliddin-Coder",
+    "file": "/books/react-qollanma.pdf",
+    "previewPages": 3
+  }
+]

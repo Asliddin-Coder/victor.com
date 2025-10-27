@@ -1,9 +1,20 @@
-import React from 'react';
+import Copyright from "../../components/copyright/Copyright";
+import Service from "../../components/hero/Service";
+import LetsWork from "../../components/letsWork/LetsWork";
+import MyServicesTwo from "../../components/myServices/MyServicesTwo";
+import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
+import FAQ from '../../components/faq/FAQTwo'
 
-const Service = () => {
+const Services = () => {
   return (
-    <div>Service</div>
+    <>
+      <Service />
+      <MyServicesTwo />
+      <LetsWork />
+      <TestimonialTwo />
+      <FAQ />
+    </>
   )
 }
 
-export default Service
+export default Services

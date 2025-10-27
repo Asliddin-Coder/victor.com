@@ -37,8 +37,8 @@ const Hero = () => {
           <h1 className={styles.placeholder}>VICTOR</h1>
           {/* Lines */}
           <div className={styles.lines}>
-            <div className={styles.line}>A</div>
-            <div className={styles.line}>BB</div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
           </div>
           {/* Images */}
           <img id={styles.person} src={person} alt="" />

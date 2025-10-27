@@ -49,53 +49,64 @@ const Nav = () => {
                                 About
                             </Link>
                             <Link
-                                to={"/portfolio"}
-                                className={`${styles.navItem} ${location.pathname == '/portfolio' ? styles.active : ""}`}
-                            >
-                                Portfolio
-                            </Link>
-                            <Link
                                 to={"/service"}
                                 className={`${styles.navItem} ${location.pathname === '/service' ? styles.active : ""}`}
                             >
                                 Service
                             </Link>
                             <Link
+                                to={"/portfolio"}
+                                className={`${styles.navItem} ${location.pathname == '/portfolio' ? styles.active : ""}`}
+                            >
+                                Portfolio
+                            </Link>
+                            {/* <Link
                                 to={"/blogs"}
                                 className={`${styles.navItem} ${location.pathname === '/blogs' ? styles.active : ""}`}
                             >
                                 Blogs
-                            </Link>
+                            </Link> */}
                             <Link
                                 to={"/books"}
                                 className={`${styles.navItem} ${location.pathname === '/books' ? styles.active : ""}`}
                             >
                                 Books
                             </Link>
-                            <Link
+                            {/* <Link
                                 to={"/article"}
                                 className={`${styles.navItem} ${location.pathname === '/article' ? styles.active : ""}`}
                             >
                                 Article
                             </Link>
-                                                        <Link
+                            <Link
                                 to={"/programs"}
                                 className={`${styles.navItem} ${location.pathname === '/programs' ? styles.active : ""}`}
                             >
                                 Programs
-                            </Link>
+                            </Link> */}
                             <Link
                                 to={"/contact"}
                                 className={`${styles.navItem} ${location.pathname === '/contact' ? styles.active : ""}`}
                             >
                                 Contact
                             </Link>
+                            {/* <Link
+                                to={"/login"}
+                                className={`${styles.navItem} ${location.pathname === '/login' ? styles.active : ""}`}
+                            >
+                                Login
+                            </Link> */}
                         </ul>
                     </nav>
                     {/* Navigation Bar end */}
 
                     {/* Contact start */}
-                    <button className={styles.contactBtn}>Contact</button>
+                    <Link
+                        to={"/contact"}
+                        className={`${styles.contactBtn} ${location.pathname === '/contact' ? styles.active : ""}`}
+                    >
+                        Contact
+                    </Link>
                     {/* Contact end */}
                 </div>
             </div>
