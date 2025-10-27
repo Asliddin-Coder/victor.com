@@ -9,7 +9,7 @@ export default function Books() {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
-    fetch("../../../public/data/book.json")
+    fetch(`${import.meta.env.BASE_URL}data/book.json`)
       .then((res) => res.json())
       .then(setBooks)
       .catch(console.error);
